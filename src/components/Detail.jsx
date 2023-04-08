@@ -5,9 +5,6 @@ const Detail = () => {
     return (
         <div>
             <h1>DETAIL ANIME PAGE</h1>
-            <div>
-                <p>Judul</p>
-            </div>
         </div>
     )
 }
