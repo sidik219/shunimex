@@ -1,5 +1,7 @@
 import React from "react"
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
+import FullCalendar from "@fullcalendar/react"
+import dayGridPlugin from "@fullcalendar/daygrid"
 import {
     TbLetterA,
     TbLetterB,
@@ -16,6 +18,12 @@ import {
 const Jadwal = () => {
     // JADWAL ANIME
     const navigate = useNavigate()
+    
+    // Untuk memberikan jadwal pada tanggal yang di tentukan
+    const events = [
+        {title: 'Meeting', start: new Date()},
+        {title: 'Overlord', start: '2023-04-16', end: '2023-04-21'}
+    ]
 
     return (
         // Container
@@ -63,22 +71,35 @@ const Jadwal = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
-                            {/* Card */}
-                            
-                        </div>
-                        {/* Pagination */}
-                        <div className="p-4 pt-4">
-                            <div className="btn-group grid grid-cols-2 gap-2">
-                                <button className="btn btn-outline bg-blue-200 md:rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">Back</button>
-                                <button className="btn btn-outline btn-primary bg-blue-200 md:rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">Next</button>
-                            </div>
+                        <div className="max-h-[24rem] overflow-y-scroll">
+                            {/* Callendar */}
+                            <FullCalendar
+                                headerToolbar={{
+                                    start: "today prev next",
+                                    end: "dayGridMonth dayGridWeek dayGridDay",
+                                }}
+                                plugins={[dayGridPlugin]}
+                                view={['dayGridMonth', 'dayGridWeek', 'dayGridDay']}
+                                weekends={true}
+                                events={events}
+                                eventContent={renderEventContent}
+                            />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     )
+}
+
+// a custom render function
+function renderEventContent(eventInfo) {
+  return (
+    <>
+      <b>{eventInfo.timeText}</b>
+      <i>{eventInfo.event.title}</i>
+    </>
+  )
 }
 
 export default Jadwal

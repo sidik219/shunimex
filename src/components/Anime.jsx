@@ -79,17 +79,8 @@ const Anime = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-                            <div className="drawer-side">
-                                <label for="my-drawer-2" className="drawer-overlay"></label> 
-                                <ul className="menu p-4 bg-blue-200 md:rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-base-content">
-                                    <span className="font-semibold text-white opacity opacity-70">GENRE</span>
-                                    <li><a><TbLetterA />Action</a></li>
-                                    <li><a><TbLetterB />Boob</a></li>
-                                    <li><a><TbLetterC />Comedy</a></li>
-                                </ul>
-                            </div>
-                            {/* Card */}
+                        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 max-h-[24rem] overflow-y-scroll">
+                            {/* Card Start*/}
                             <div className="card md:w-72 p-4 image-full">
                                 <div className="p-3">
                                     <span className="text-9xl text-green-500"><TbLetterA /></span>
@@ -376,6 +367,7 @@ const Anime = () => {
                                     </ul>
                                 </div>
                             </div>
+                            {/* Card End*/}
                         </div>
                     </div>
                 </div>

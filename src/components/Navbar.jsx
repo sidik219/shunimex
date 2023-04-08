@@ -4,6 +4,8 @@ import Dummy from '../assets/user.jpg'
 
 const Navbar = () => {
     // NAVBAR
+    /*Error tampillan keseluran menghilang ketika menggunakan useNavigate() */
+    // const navigate = useNavigate()
 
     return (
         // Container
