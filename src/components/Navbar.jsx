@@ -1,11 +1,8 @@
 import React from "react"
-import { useNavigate } from "react-router-dom";
 import Dummy from '../assets/user.jpg'
 
 const Navbar = () => {
     // NAVBAR
-    /*Error tampillan keseluran menghilang ketika menggunakan useNavigate() */
-    // const navigate = useNavigate()
 
     return (
         // Container
@@ -18,7 +15,7 @@ const Navbar = () => {
                     </button>
                 </div> */}
                 <div className="flex-1">
-                    <a className="btn btn-ghost normal-case text-xl" onClick={() => navigate('/')}>Shunimex</a>
+                    <a className="normal-case text-xl text-white font-bold ml-6">Shunimex</a>
                 </div>
                 <div className="flex-none gap-2">
                     <div className="form-control">

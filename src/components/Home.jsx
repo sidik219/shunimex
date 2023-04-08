@@ -1,5 +1,5 @@
 import React from "react"
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 import {
     TbLetterA,
     TbLetterB,
@@ -59,12 +59,12 @@ const Homepage = () => {
                             <h1 className="text-3xl font-bold text-white">List Anime Ongoing</h1>
                             <div class="text-sm breadcrumbs">
                                 <ul>
-                                    <li><a>Home</a></li>
+                                    <li><a onClick={() => navigate('/')}>Home</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
-                            {/* Card */}
+                            {/* Card Start*/}
                             <div className="card md:w-72 p-4 image-full">
                                 <figure><img src={Dummy} alt="/" /></figure>
                                 <div className="card-body">
@@ -77,58 +77,13 @@ const Homepage = () => {
                                         <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
                                     </div>
                                     <div className="card-actions justify-end">
-                                    <button className="btn btn-outline btn-warning">Check Now</button>
+                                    <button className="btn btn-outline btn-warning">
+                                        <a onClick={() => navigate('/Detailpage')}>Check Now</a>
+                                    </button>
                                     </div>
                                 </div>
                             </div>
-                            <div className="card md:w-72 p-4 image-full">
-                                <figure><img src={Dummy} alt="/" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Judul Anime</h2>
-                                    <div class="rating rating-xs">
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                    </div>
-                                    <div className="card-actions justify-end">
-                                    <button className="btn btn-outline btn-warning">Check Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card md:w-72 p-4 image-full">
-                                <figure><img src={Dummy} alt="/" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Judul Anime</h2>
-                                    <div class="rating rating-xs">
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                    </div>
-                                    <div className="card-actions justify-end">
-                                    <button className="btn btn-outline btn-warning">Check Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card md:w-72 p-4 image-full">
-                                <figure><img src={Dummy} alt="/" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Judul Anime</h2>
-                                    <div class="rating rating-xs">
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
-                                    </div>
-                                    <div className="card-actions justify-end">
-                                    <button className="btn btn-outline btn-warning">Check Now</button>
-                                    </div>
-                                </div>
-                            </div>
+                            {/* Card End*/}
                         </div>
                         {/* Pagination */}
                         <div className="p-4 pt-4">

@@ -37,7 +37,7 @@ const Jadwal = () => {
                             <div className="drawer-side">
                                 <label for="my-drawer-2" className="drawer-overlay"></label> 
                                 <ul className="menu p-4 bg-blue-200 md:rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-base-content">
-                                    <span className="font-semibold text-white opacity opacity-70">JADWALPAGE</span>
+                                    <span className="font-semibold text-white opacity opacity-70">JADWAL PAGE</span>
                                     <li><a onClick={() => navigate('/')}><TbLetterH />Home</a></li>
                                     <li><a onClick={() => navigate('/Animepage')}><TbLetterA />Anime</a></li>
                                     <li><a onClick={() => navigate('/Jadwalpage')}><TbLetterJ />Jadwal</a></li>
@@ -57,7 +57,7 @@ const Jadwal = () => {
                         </div>
                     </div>
                 </div>
-                {/* Container-2 Untuk penempatan fitur ongoing anime */}
+                {/* Container-2 Untuk penempatan fitur jadwal anime */}
                 <div className="truncate col-span-1 md:col-span-4">
                     {/* Flex */}
                     <div className="flex flex-col z-50">
@@ -66,8 +66,8 @@ const Jadwal = () => {
                             <h1 className="text-3xl font-bold text-white">Jadwal Anime</h1>
                             <div class="text-sm breadcrumbs">
                                 <ul>
-                                    <li><a>Home</a></li>
-                                    <li><a>Jadwal</a></li>
+                                    <li><a onClick={() => navigate('/')}>Home</a></li>
+                                    <li><a onClick={() => navigate('/Jadwalpage')}>Jadwal</a></li>
                                 </ul>
                             </div>
                         </div>
