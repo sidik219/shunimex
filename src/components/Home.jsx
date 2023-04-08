@@ -113,7 +113,22 @@ const Homepage = () => {
                                     </div>
                                 </div>
                             </div>
-                            
+                            <div className="card md:w-72 p-4 image-full">
+                                <figure><img src={Dummy} alt="/" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title">Judul Anime</h2>
+                                    <div class="rating rating-xs">
+                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
+                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                        <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                                    </div>
+                                    <div className="card-actions justify-end">
+                                    <button className="btn btn-outline btn-warning">Check Now</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         {/* Pagination */}
                         <div className="p-4 pt-4">
